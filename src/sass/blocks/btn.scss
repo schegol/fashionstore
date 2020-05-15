@@ -1,0 +1,10 @@
+.btn {
+  @include dflex(nowrap, row, center, center);
+  height: 60px;
+  font-size: 18px;
+  background-color: $bg-color-dark;
+
+  &--accent {
+    background-color: $accent-color;
+  }
+}

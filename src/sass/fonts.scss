@@ -1,22 +1,27 @@
 @font-face {
-  font-family: "Lato";
-  src: local("Lato"),
-       local("Lato Regular"),
-       url("../fonts/Lato-Regular.eot?") format("eot"),
-       // url("../fonts/Lato-Regular.ttf") format("truetype"),
-       url("../fonts/Lato-Regular.woff") format("woff"),
-       url("../fonts/TTNorms-Regular.woff2") format("woff2");
+  font-family: "Circe";
+  src: local("Circe"),
+       local("Circe Regular"),
+       local("Circe-Regular"),
+       url("../fonts/Circe-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Lato";
-  src: local("Lato Light"),
-       url("../fonts/Lato-Light.eot?") format("eot"),
-       // url("../fonts/Lato-Light.ttf") format("truetype"),
-       url("../fonts/Lato-Light.woff") format("woff"),
-       url("../fonts/Lato-Light.woff2") format("woff2");
+  font-family: "Circe";
+  src: local("Circe-Light"),
+       local("Circe Light"),
+       url("../fonts/Circe-Light.ttf") format("truetype");
   font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: local("Circe-Bold"),
+       local("Circe Bold"),
+       url("../fonts/Circe-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-display: swap;
 }
