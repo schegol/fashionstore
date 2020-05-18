@@ -3,8 +3,13 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
-@import "blocks/container.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/btn.scss";
 @import "blocks/header.scss";
 // @import "blocks/section.scss";
-// @import "blocks/slider.scss";;
+@import "blocks/index-slider.scss";
+@import "blocks/special-offers.scss";
+@import "blocks/single-offer.scss";
+@import "blocks/about.scss";
+@import "blocks/subscription-form.scss";
 @import "blocks/footer.scss";

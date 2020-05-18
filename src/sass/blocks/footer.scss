@@ -1,0 +1,80 @@
+.footer__navigation {
+  padding: 75px 0 65px;
+  background-color: #f5f5f5;
+}
+
+.footer__navigation .wrapper {
+  @include dflex(nowrap, row, space-between, flex-start);
+}
+
+.footer__info {
+  @include dflex(nowrap, row, flex-start, flex-start);
+}
+
+.footer__info-column {
+  &:not(:last-of-type) {
+    margin-right: 144px;
+  }
+}
+
+.footer__column-heading {
+  @include reset;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 33px;
+  font-weight: 400;
+  color: $bg-color-dark;
+}
+
+.footer__column-menu {
+  @include list-reset;
+}
+
+.footer__menu-item {
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}
+
+.footer__menu-link {
+  @include transition(color);
+  color: $bg-color-dark;
+
+  &--icon {
+    padding-left: 28px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bg-color-light;
+  }
+}
+
+.footer__payment-methods {
+  @include list-reset;
+  @include dflex(nowrap, row, flex-start, flex-start);
+}
+
+.footer__payment-method {
+  &:not(:last-child) {
+    margin-right: 21px;
+  }
+}
+
+.footer__copyright-line {
+  @include dflex(nowrap, row, center, center);
+  min-height: 95px;
+  background-color: #e8e8e8;
+}
+
+.footer__copyright-text {
+  @include reset;
+  color: $bg-color-dark;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: 400;
+}

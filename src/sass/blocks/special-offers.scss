@@ -1,0 +1,30 @@
+.special-offers {
+  margin-bottom: 136px;
+}
+
+.special-offers__heading {
+  @include reset;
+  margin-bottom: 34px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: normal;
+}
+
+.special-offers__blocks {
+  @include dflex(nowrap, row, flex-start, flex-start);
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.special-offers__offer-block {
+  flex-basis: calc(100% - 20px);
+  height: 446px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #fafafa;
+
+  &:nth-child(even) {
+    transform: translateY(45px);
+  }
+}

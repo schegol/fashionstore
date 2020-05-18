@@ -1,0 +1,20 @@
+.about {
+  margin-bottom: 91px;
+}
+
+.about .wrapper {
+  @include dflex(nowrap, row, space-between, center);
+}
+
+.about__description {
+  width: 575px;
+}
+
+.about__description {
+  line-height: 33px;
+}
+
+.about__form {
+  width: 575px;
+  margin-left: auto;
+}

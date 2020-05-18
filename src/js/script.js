@@ -13,6 +13,19 @@ $(document).ready(function () {
     body.css('padding-top', 0);
   });
 
+  //слайдер:
+  $('.index-slider__slider').slick({
+    prevArrow: $('.index-slider__nav-btn--prev'),
+    nextArrow: $('.index-slider__nav-btn--next'),
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    autoPlay: true,
+    speed: 500,
+    adaptiveHeight: true
+  });
+
   $(window).resize(function () {
     if (!offerLine.hasClass('header__offer-line--closed')) {
       let offerLineHeight = offerLine.outerHeight();
