@@ -1,0 +1,41 @@
+.single-offer__container {
+  @include dflex(nowrap, column, flex-start, flex-start);
+  position: relative;
+  min-height: 494px;
+  margin-bottom: 75px;
+  padding: 116px 0 0 555px;
+  background-color: #000;
+}
+
+.single-offer__img {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+
+.single-offer__heading {
+  @include reset;
+  color: #fff;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: normal;
+}
+
+.single-offer__highlight {
+  font-size: 79px;
+  line-height: 84px;
+  color: $accent-color;
+  font-weight: 400;
+}
+
+.single-offer__description {
+  @include reset;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 26px;
+  line-height: 44px;
+}
+
+.single-offer__btn {
+  padding: 0 60px;
+}
