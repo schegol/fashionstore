@@ -26,10 +26,52 @@ $(document).ready(function () {
     adaptiveHeight: true
   });
 
+  //моб.меню:
+  const menuToggle = $('.header__menu-toggle');
+  const menuCross = $('.header__menu-close');
+  const menuOverlay = $('.header__mobile-menu-overlay');
+  const menuBlock = $('.header__mobile-menu-container');
+
+  const mobileMenuClose = function () {
+    menuOverlay.removeClass('open');
+    body.removeClass('modal-open');
+  };
+
+  menuToggle.click(function () {
+    menuOverlay.toggleClass('open');
+    body.toggleClass('modal-open');
+  });
+
+  menuCross.click(function () {
+    mobileMenuClose();
+  });
+
+  menuOverlay.click(function (e) {
+    if (!menuBlock.is(e.target) && menuBlock.has(e.target).length === 0) {
+      mobileMenuClose();
+    };
+  });
+
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+      mobileMenuClose();
+    };
+  });
+
   $(window).resize(function () {
     if (!offerLine.hasClass('header__offer-line--closed')) {
       let offerLineHeight = offerLine.outerHeight();
       body.css('padding-top', offerLineHeight+'px');
+    };
+
+    if ($(window).width() >= 768) {
+      if (body.hasClass('modal-open')) {
+        body.removeClass('modal-open');
+      };
+
+      if (menuOverlay.hasClass('open')) {
+        menuOverlay.removeClass('open');
+      };
     };
   });
 });

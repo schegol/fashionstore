@@ -11,6 +11,14 @@
   @include dflex(nowrap, row, flex-start, flex-start);
 }
 
+.footer__logo {
+  display: block;
+
+  &--mobile {
+    display: none;
+  }
+}
+
 .footer__info-column {
   &:not(:last-of-type) {
     margin-right: 144px;
@@ -65,9 +73,13 @@
 }
 
 .footer__copyright-line {
-  @include dflex(nowrap, row, center, center);
-  min-height: 95px;
   background-color: #e8e8e8;
+}
+
+.footer__copyright-line .wrapper {
+  @include dflex(nowrap, row, center, center);
+  height: 1px;
+  min-height: 95px;
 }
 
 .footer__copyright-text {
@@ -77,4 +89,104 @@
   line-height: 33px;
   text-align: center;
   font-weight: 400;
+}
+
+@media (max-width: $lg) {
+  .footer__navigation .wrapper {
+    justify-content: flex-start;
+  }
+
+  .footer__logo-link {
+    margin-right: 120px;
+  }
+
+  .footer__info {
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .footer__info-column {
+    &:not(:last-of-type) {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .footer__navigation {
+    padding: 50px 0;
+  }
+
+  .footer__navigation .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__logo-link {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer__logo {
+    display: none;
+
+    &--mobile {
+      display: block;
+    }
+  }
+
+  .footer__info {
+    width: 100%;
+  }
+
+  .footer__copyright-text {
+    line-height: normal;
+  }
+}
+
+@media (max-width: $sm) {
+  .footer__navigation .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .footer__logo-link {
+    flex-basis: 100%;
+  }
+
+  .footer__info {
+    flex-wrap: wrap;
+  }
+
+  .footer__info-column {
+    @include dflex(nowrap, column, flex-start, center);
+    flex-basis: 50%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer__column-heading {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .footer__menu-item {
+    text-align: center;
+
+    &:not(:last-child) {
+          margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .footer__navigation {
+    padding: 40px 0;
+  }
+
+  .footer__info-column {
+    flex-basis: 100%;
+  }
 }
