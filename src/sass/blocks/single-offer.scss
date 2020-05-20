@@ -1,10 +1,17 @@
 .single-offer__container {
   @include dflex(nowrap, column, flex-start, flex-start);
+  @include transition(transform);
   position: relative;
   min-height: 494px;
   margin-bottom: 75px;
   padding: 116px 0 0 555px;
   background-color: #000;
+  transform: scale(1);
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.025);
+  }
 }
 
 .single-offer__img {

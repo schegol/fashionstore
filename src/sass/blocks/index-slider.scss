@@ -6,6 +6,16 @@
   position: relative;
 }
 
+.index-slider .slick-list {
+  @include transition(transform);
+  transform: scale(1) translateY(0);
+
+  &:hover,
+  &:focus-within {
+    transform: scale(1.025) translateY(10px);
+  }
+}
+
 .index-slider__slide {
   position: relative;
   display: flex !important;
@@ -109,6 +119,13 @@
 @media (max-width: $md) {
   .index-slider {
     margin-bottom: 10px;
+  }
+
+  .index-slider .slick-list {
+    &:hover,
+    &:focus-within {
+      transform: scale(1.0125) translateY(3px);
+    }
   }
 
   .index-slider__slide {

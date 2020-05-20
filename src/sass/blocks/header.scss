@@ -190,6 +190,7 @@
   display: block;
   padding: 17px 0;
   color: #fff;
+  outline: none;
 
   &::after {
     @include transition();
@@ -226,6 +227,8 @@
 }
 
 .header__icon-link {
+  outline: none;
+  
   &--cart {
     @include dflex(nowrap, flex-start, center, center);
   }
